@@ -44,6 +44,18 @@ A consistent naming convention is critical for scalability, clarity, and automat
 
 ## 2. Resource Organization Strategy
 
+### Azure Resource Hierarchy
+
+Azure provides a hierarchical structure to organize resources, manage access, and apply governance policies at scale. The hierarchy consists of five main levels:
+
+1. **Tenant (Microsoft Entra ID)**: The top-level administrative and identity boundary in the Microsoft Cloud. It represents a single organization. A tenant hosts user accounts, groups, and application registrations, serving as the central identity and access management (IAM) boundary.
+2. **Management Groups**: Logical containers used to manage access, policy, and compliance across multiple subscriptions. All subscriptions within a management group automatically inherit the conditions (RBAC, policies) applied to it.
+3. **Subscriptions**: Containers that group resource groups and resources together. Each subscription is linked to a single tenant, has its own billing terms, and acts as a quota and scale limit boundary.
+4. **Resource Groups**: Logical folders where Azure resources are deployed and managed. They serve as a lifecycle boundary, allowing related resources for a specific workload or environment to be created, updated, and deleted as a single unit.
+5. **Resources**: The individual service instances provisioned in Azure (such as Log Analytics Workspaces, Storage Accounts, and Virtual Machines).
+
+---
+
 ### Subscription Structure
 
 All resources are deployed under a single subscription:
@@ -54,6 +66,7 @@ Azure subscription 1
 ├── rg-governance-prod-uks    (Production environment)
 └── rg-governance-test-uks    (Temporary – lifecycle management test)
 ```
+
 
 ### Rationale
 
