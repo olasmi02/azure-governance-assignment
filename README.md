@@ -54,6 +54,29 @@ Azure provides a hierarchical structure to organize resources, manage access, an
 4. **Resource Groups**: Logical folders where Azure resources are deployed and managed. They serve as a lifecycle boundary, allowing related resources for a specific workload or environment to be created, updated, and deleted as a single unit.
 5. **Resources**: The individual service instances provisioned in Azure (such as Log Analytics Workspaces, Storage Accounts, and Virtual Machines).
 
+### Visual Hierarchy Diagram
+
+```mermaid
+graph TD
+    Tenant["Tenant (Microsoft Entra ID)<br>• Top-level identity and management boundary"]
+    MG["Management Groups<br>• Policy and access inheritance scope"]
+    Sub["Subscriptions<br>• Logical billing and scale boundary"]
+    RG["Resource Groups<br>• Deployment and lifecycle boundary"]
+    Res["Resources<br>• VMs, Storage Accounts, Databases, etc."]
+
+    Tenant --> MG
+    MG --> Sub
+    Sub --> RG
+    RG --> Res
+
+    %% Styling to align with Microsoft Azure color palette
+    style Tenant fill:#0078D4,stroke:#005A9E,stroke-width:2px,color:#fff
+    style MG fill:#5E5E5E,stroke:#333,stroke-width:2px,color:#fff
+    style Sub fill:#00A4EF,stroke:#008AD2,stroke-width:2px,color:#fff
+    style RG fill:#F25022,stroke:#B33C1B,stroke-width:2px,color:#fff
+    style Res fill:#7FBA00,stroke:#5F8B00,stroke-width:2px,color:#fff
+```
+
 ---
 
 ### Subscription Structure
