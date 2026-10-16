@@ -3,7 +3,7 @@
 **Student:** Olamileye Duduyemi  
 **Date:** May 2026  
 **Assignment:** Azure Subscriptions, Resource Groups & Governance  
-**Subscription:** Azure subscription 1 (`9335a9cd-ae74-439b-94b3-d965ca478c53`)
+**Subscription:** Azure subscription 1
 
 ---
 
@@ -205,13 +205,13 @@ az storage account create \
 az role assignment create \
   --role "Contributor" \
   --assignee duduyemiolamileyeclement@gmail.com \
-  --scope /subscriptions/9335a9cd-ae74-439b-94b3-d965ca478c53/resourceGroups/rg-governance-dev-uks
+  --scope /subscriptions/<subscription-id>/resourceGroups/rg-governance-dev-uks
 
 # Grant Reader on Prod RG to the QA team
 az role assignment create \
   --role "Reader" \
   --assignee duduyemiolamileyeclement@gmail.com \
-  --scope /subscriptions/9335a9cd-ae74-439b-94b3-d965ca478c53/resourceGroups/rg-governance-prod-uks
+  --scope /subscriptions/<subscription-id>/resourceGroups/rg-governance-prod-uks
 ```
 
 ### Delete the Test Resource Group (Lifecycle Demo)
