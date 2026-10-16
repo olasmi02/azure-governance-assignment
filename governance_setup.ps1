@@ -4,7 +4,7 @@
 # Student:    Olamileye Duduyemi | May 2026
 # =============================================================================
 
-$SUBSCRIPTION_ID = "9335a9cd-ae74-439b-94b3-d965ca478c53"
+$SUBSCRIPTION_ID = "<your-subscription-id>"
 $LOCATION        = "uksouth"
 $PROJECT         = "azure-governance-assignment"
 $CREATED_BY      = "duduyemiolamileyeclement@gmail.com"
